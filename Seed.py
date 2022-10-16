@@ -8,10 +8,14 @@ def temperature(min, max):
             TempOver = max - maxTemp
             Prod_1 = 100 - (TempOver * 5.5)
             ProdTotal = ProdTotal + Prod_1
+        if max ==25:
+            ProdTotal = 100
         if min < 21:
             TempUnder = min - minTemp
             Prod_2 = 100 - (TempUnder * 5.5)
             ProdTotal = ProdTotal + Prod_2
+        if min == 21:
+            ProdTotal = 100
         elif 21<= min <= 25 and 21<= max <= 25:
             Prod_3 = 100
             return  Prod_3
